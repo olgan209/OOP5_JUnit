@@ -22,12 +22,22 @@ public class StringProcessorTest {
     }
 
     @Test
-    void calculateDigitsTest(){ /*tests work correctly, in the last test i made mistake in purpose, to check if everything works correctly*/
+    void calculateDigitsTest(){ /*tests work correctly, in the last test I made a mistake on purpose, to check if everything works correctly*/
         assertEquals(2, processor.calculateDigits("45"));
         assertEquals(4, processor.calculateDigits("7384"));
         assertEquals(5, processor.calculateDigits("99997"));
         assertEquals(2, processor.calculateDigits("10"));
         assertEquals(2, processor.calculateDigits("197"));
+    }
+
+    @Test
+    void calculateWords(){ /*all tests work correctly*/
+        assertEquals(2, processor.calculateWords("Hello World!"));
+        assertEquals(4, processor.calculateWords("Coraline in a Wonderland"));
+        assertEquals(9, processor.calculateWords("My favorite book is \"The picture of Dorian Gray\" "));
+        assertEquals(4, processor.calculateWords("Coraline in a Wonderland"));
+        assertEquals(6, processor.calculateWords("This year i will work hard"));
+        assertEquals(7, processor.calculateWords("Next summer I'm going to visit London"));
     }
 
 }

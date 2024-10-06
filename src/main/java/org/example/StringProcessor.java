@@ -47,4 +47,12 @@ public class StringProcessor {
         }
         return digits; /*and return the value*/
     }
+
+    public int calculateWords(String sentence){ /*Simple method where we are just splitting the sentences by space in it*/
+        if(sentence == null){ /*base case*/
+            return 0;
+        }
+        String[] words = sentence.trim().split(" ");
+        return words.length;
+    }
 }
