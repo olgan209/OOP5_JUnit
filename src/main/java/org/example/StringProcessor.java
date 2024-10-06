@@ -34,4 +34,17 @@ public class StringProcessor {
         }
         return false; /*and weak otherwise*/
     }
+
+    public int calculateDigits(String sentence){
+        if(sentence == null){ /* base case*/
+            return 0;
+        }
+        int digits = 0;
+        for(char c : sentence.toCharArray()){ /*using for each loop separate chars in a sentence to count them*/
+            if(Character.isDigit(c)){
+                digits++;
+            }
+        }
+        return digits; /*and return the value*/
+    }
 }

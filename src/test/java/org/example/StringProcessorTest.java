@@ -20,4 +20,14 @@ public class StringProcessorTest {
         assertFalse(processor.isStrongPassword("123absd"), "Your password is easy to hack");/*forgot about Upper case latter, special char*/
         assertTrue(processor.isStrongPassword("myWorld901%"), "Strong password");
     }
+
+    @Test
+    void calculateDigitsTest(){ /*tests work correctly, in the last test i made mistake in purpose, to check if everything works correctly*/
+        assertEquals(2, processor.calculateDigits("45"));
+        assertEquals(4, processor.calculateDigits("7384"));
+        assertEquals(5, processor.calculateDigits("99997"));
+        assertEquals(2, processor.calculateDigits("10"));
+        assertEquals(2, processor.calculateDigits("197"));
+    }
+
 }
